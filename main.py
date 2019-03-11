@@ -18,7 +18,7 @@ class Example(QWidget):
         self.setLayout(hbox)
 
         self.move(100, 200)
-        self.setWindowTitle('Red Rock')
+        self.setWindowTitle('TFBS Analysis Portable 1.0')
         self.show()
 
 
