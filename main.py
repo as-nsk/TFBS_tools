@@ -1,4 +1,4 @@
-import os
+
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 from tfbs_gui import Ui_MainWindow
