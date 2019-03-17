@@ -160,17 +160,4 @@ class Ui_MainWindow(object):
         self.pushButton_9.setText(_translate("MainWindow", "Load data selectively"))
         self.checkBox_4.setText(_translate("MainWindow", "Shuffle data"))
 
-        self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-class MainWindow(QtWidgets.QMainWindow):
-        def __init__(self):
-            super().__init__()
-            self.ui = Ui_MainWindow()
-            self.ui.setupUi(self)
-            self.show()
-
-if __name__ == '__main__':
-        app = QtWidgets.QApplication(sys.argv)
-        dl = MainWindow()
-        sys.exit(app.exec_())
