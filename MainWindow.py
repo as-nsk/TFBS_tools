@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file 'MainWindow.ui'
 #
-# Created by: PyQt5 UI code generator 5.12
+# Created by: PyQt5 UI code generator 5.5.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import sys
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -122,7 +121,7 @@ class Ui_MainWindow(object):
         self.checkBox_4.setObjectName("checkBox_4")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 19))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -160,17 +159,3 @@ class Ui_MainWindow(object):
         self.pushButton_9.setText(_translate("MainWindow", "Load data selectively"))
         self.checkBox_4.setText(_translate("MainWindow", "Shuffle data"))
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
-class MainWindow(QtWidgets.QMainWindow):
-        def __init__(self):
-            super().__init__()
-            self.ui = Ui_MainWindow()
-            self.ui.setupUi(self)
-            self.show()
-
-if __name__ == '__main__':
-        app = QtWidgets.QApplication(sys.argv)
-        dl = MainWindow()
-        sys.exit(app.exec_())
