@@ -41,4 +41,33 @@ for i in ['1', '2', '3']:
         #number_of_lines
         #number_of_all_lines.append(number_of_lines)
         my_list = read_file(fname)
-        my_lists.append(my_list)
+        # my_lists.append(my_list)
+
+
+class Point:
+    def __init__(self, coord, opening, chr_num, factor):
+        self.coord = coord
+        self.opening = opening
+        self.chr_num = chr_num
+        self.factor = factor
+
+    def __lt__(self, p):
+        if self.chr_num != p.chr_num:
+            return self.chr_num < p.chr_num
+        if self.coord != p.coord:
+            return self.coord < p.coord
+        return self.opening and not p.opening
+
+
+class Interval:
+    pass
+
+
+def main():
+    files_count = 0
+    merge_gap = 200
+    max_length = 500
+
+
+if __name__ == '__main__':
+    pass
