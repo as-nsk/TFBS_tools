@@ -76,6 +76,14 @@ class Interval:
             factor = factor << 1
 
 
+def string_to_int(string):
+    if string == "x" or string == "X":
+        return 20
+    if string == "y" or string == "Y":
+        return 20
+    return int(string)
+
+
 def main():
     files_count = 0
     merge_gap = 200
