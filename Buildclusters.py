@@ -60,7 +60,20 @@ class Point:
 
 
 class Interval:
-    pass
+    def __init__(self, n1, n2, chr_num, factors):
+        self.n1 = n1
+        self.n2 = n2
+        self.chr_num = chr_num
+        self.factors = factors
+
+    def factors_count(self):
+        count = 0
+        factors = self.factors
+        factor = 1
+        while factor:
+            if factors & factor:
+                count = count + 1
+            factor = factor << 1
 
 
 def main():
