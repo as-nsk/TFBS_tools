@@ -9,15 +9,15 @@ class MainWindow(QtWidgets.QMainWindow):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.ui.pushButton.clicked.connect(self.onPushButtonClick)
+        self.ui.LoadLocalDataButton.clicked.connect(self.onPushButtonClick)
         self.show()
 
     def onPushButtonClick(self):
         msg = QtWidgets.QMessageBox()
         msg.setIcon(QtWidgets.QMessageBox.Information)
-        msg.setText("This is a message box")
+        msg.setText("Select the files to be loaded")
         msg.setInformativeText("This is additional information")
-        msg.setWindowTitle("MessageBox demo")
+        msg.setWindowTitle("Load local data")
         msg.setDetailedText("The details are as follows:")
         msg.exec_()
 
