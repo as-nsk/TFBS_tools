@@ -62,7 +62,7 @@ def read_file(filename, points):
 
 
 def write_file(filename, intervals):
-    with open(filename) as f:
+    with open(filename, 'wt') as f:
         for interval in intervals:
             args = (interval.chr_num, interval.n1, interval.n2, interval.factors_count())
             f.write('chr{}:{}-{} TF: {}'.format(*args))
