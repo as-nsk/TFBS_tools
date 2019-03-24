@@ -24,30 +24,6 @@ def read_file(filename, points):
             points.append(point)
 
 
-# print(sys.path)
-# fname_pattern = 'input/input%s.txt'
-
-
-def count_lines(fname):
-    # proc = sp.Popen(['wc', '-l', fname], stdout=sp.PIPE)
-    # (out, _) = proc.communicate()
-    # status = proc.wait()
-    # out = str(out).decode()
-    # pos = out.find(' ')
-    # lc = int(out[:pos])
-    # return lc
-    pass
-
-
-# for i in ['1', '2', '3']:
-#         fname = fname_pattern % i
-#         #number_of_lines = count_lines(fname)
-#         #number_of_lines
-#         #number_of_all_lines.append(number_of_lines)
-#         my_list = read_file(fname)
-#         # my_lists.append(my_list)
-
-
 class Point:
     def __init__(self, coord, opening, chr_num, factor):
         self.coord = coord
