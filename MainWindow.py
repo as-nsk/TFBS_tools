@@ -2,11 +2,12 @@
 
 # Form implementation generated from reading ui file 'MainWindow.ui'
 #
-# Created by: PyQt5 UI code generator 5.5.1
+# Created by: PyQt5 UI code generator 5.12
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -47,19 +48,19 @@ class Ui_MainWindow(object):
         self.CountNumberOfIntersectionsButton = QtWidgets.QPushButton(self.centralwidget)
         self.CountNumberOfIntersectionsButton.setGeometry(QtCore.QRect(117, 366, 221, 23))
         self.CountNumberOfIntersectionsButton.setObjectName("CountNumberOfIntersectionsButton")
-        self.toolButton = QtWidgets.QToolButton(self.centralwidget)
-        self.toolButton.setGeometry(QtCore.QRect(440, 231, 31, 20))
-        self.toolButton.setObjectName("toolButton")
+        self.ChangeFolderButton = QtWidgets.QToolButton(self.centralwidget)
+        self.ChangeFolderButton.setGeometry(QtCore.QRect(440, 231, 31, 20))
+        self.ChangeFolderButton.setObjectName("ChangeFolderButton")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setGeometry(QtCore.QRect(352, 229, 81, 21))
         self.label_6.setObjectName("label_6")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(600, 230, 61, 16))
         self.label_2.setObjectName("label_2")
-        self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
-        self.progressBar.setGeometry(QtCore.QRect(590, 337, 101, 16))
-        self.progressBar.setProperty("value", 24)
-        self.progressBar.setObjectName("progressBar")
+        self.BuildClustersProgressBar = QtWidgets.QProgressBar(self.centralwidget)
+        self.BuildClustersProgressBar.setGeometry(QtCore.QRect(590, 337, 101, 16))
+        self.BuildClustersProgressBar.setProperty("value", 24)
+        self.BuildClustersProgressBar.setObjectName("progressBar")
         self.CountNumberOfIntersectionsProgressBar = QtWidgets.QProgressBar(self.centralwidget)
         self.CountNumberOfIntersectionsProgressBar.setGeometry(QtCore.QRect(590, 368, 101, 16))
         self.CountNumberOfIntersectionsProgressBar.setProperty("value", 24)
@@ -98,15 +99,15 @@ class Ui_MainWindow(object):
         self.label_8 = QtWidgets.QLabel(self.centralwidget)
         self.label_8.setGeometry(QtCore.QRect(460, 334, 71, 21))
         self.label_8.setObjectName("label_8")
-        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setGeometry(QtCore.QRect(420, 334, 31, 20))
-        self.lineEdit.setObjectName("lineEdit")
+        self.MergeGap = QtWidgets.QLineEdit(self.centralwidget)
+        self.MergeGap.setGeometry(QtCore.QRect(420, 334, 31, 20))
+        self.MergeGap.setObjectName("MergeGap")
         self.MaxLength = QtWidgets.QLineEdit(self.centralwidget)
         self.MaxLength.setGeometry(QtCore.QRect(520, 334, 31, 20))
         self.MaxLength.setObjectName("MaxLength")
-        self.checkBox = QtWidgets.QCheckBox(self.centralwidget)
-        self.checkBox.setGeometry(QtCore.QRect(370, 444, 191, 17))
-        self.checkBox.setObjectName("checkBox")
+        self.ExportHistogramsCheckBox = QtWidgets.QCheckBox(self.centralwidget)
+        self.ExportHistogramsCheckBox.setGeometry(QtCore.QRect(370, 444, 191, 17))
+        self.ExportHistogramsCheckBox.setObjectName("checkBox")
         self.ExportHeatmapsCheckBox = QtWidgets.QCheckBox(self.centralwidget)
         self.ExportHeatmapsCheckBox.setGeometry(QtCore.QRect(370, 459, 191, 40))
         self.ExportHeatmapsCheckBox.setObjectName("ExportHeatmapsCheckBox")
@@ -118,7 +119,7 @@ class Ui_MainWindow(object):
         self.ShuffleDataCheckBox.setObjectName("ShuffleDataCheckBox")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 19))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -141,7 +142,7 @@ class Ui_MainWindow(object):
         self.BuildClustersButton.setText(_translate("MainWindow", "Build clusters"))
         self.GetChIPseqPeakProfilesButto.setText(_translate("MainWindow", "Show ChIP-seq-peak profiles from UCSC"))
         self.CountNumberOfIntersectionsButton.setText(_translate("MainWindow", "Count the number of paired intersections"))
-        self.toolButton.setText(_translate("MainWindow", "..."))
+        self.ChangeFolderButton.setText(_translate("MainWindow", "..."))
         self.label_6.setText(_translate("MainWindow", "Working folder:"))
         self.label_2.setText(_translate("MainWindow", "Progress"))
         self.label_5.setText(_translate("MainWindow", "Output"))
@@ -150,8 +151,9 @@ class Ui_MainWindow(object):
         self.HelpButton.setText(_translate("MainWindow", "Help"))
         self.label_7.setText(_translate("MainWindow", "Merge gap:"))
         self.label_8.setText(_translate("MainWindow", "Max length:"))
-        self.checkBox.setText(_translate("MainWindow", "Export to the working directory"))
+        self.ExportHistogramsCheckBox.setText(_translate("MainWindow", "Export to the working directory"))
         self.ExportHeatmapsCheckBox.setText(_translate("MainWindow", "Export to the working directory"))
         self.ExportChIPseqPeakProfilesCheckBox.setText(_translate("MainWindow", "Export to the working directory"))
         self.ShuffleDataCheckBox.setText(_translate("MainWindow", "Shuffle data"))
+
 

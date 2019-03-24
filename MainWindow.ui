@@ -37,7 +37,7 @@
      <string>Parametres</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="LoadLocalDataButton">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
       <x>119</x>
@@ -428,7 +428,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>19</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
