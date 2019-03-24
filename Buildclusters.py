@@ -60,6 +60,9 @@ class Point:
             return self.coord < p.coord
         return self.opening and not p.opening
 
+    def __str__(self):
+        return 'Point({}, {}, {}, {})'.format(self.coord, self.opening, self.chr_num, self.factor)
+
 
 class Interval:
     def __init__(self, n1, n2, chr_num, factors):
