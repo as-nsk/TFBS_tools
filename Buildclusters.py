@@ -81,7 +81,7 @@ class Interval:
             factor = factor << 1
 
 
-def string_to_int(string):
+def str_to_int(string):
     if string == "x" or string == "X":
         return 20
     if string == "y" or string == "Y":
