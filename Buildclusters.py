@@ -1,5 +1,6 @@
 import sys
 import numpy
+import os
 #from collections import ChainMap
 from collections import namedtuple
 
@@ -122,21 +123,25 @@ def main():
     files_count = 0
     merge_gap = 200
     max_length = 500
+    files = os.listdir('input')
+    files = [os.path.join('input', file) for file in files]
+    points = []
+    for file in files:
+        read_file(file, points)
+        print('read file {}'.format(file))
+    pass
+
+    points.sort()
+
+    intervals = []
+    make_intervals(points, intervals, merge_gap, max_length)
+    write_file('results.txt', intervals)
+
+    pass
 
 
 if __name__ == '__main__':
-    print('start')
-    import os
-    import time
-    files = os.listdir('input')
-    files = [os.path.join('input', file) for file in files]
-    times = []
-    for file in files:
-        points = []
-        print('reading {}'.format(file))
-        start = time.time()
-        read_file(file, points)
-        end = time.time()
-        print(end - start)
-
+    print('started')
+    main()
+    print('finished')
     pass
