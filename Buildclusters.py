@@ -103,6 +103,12 @@ class Interval:
     def factors_count(self):
         return len(self.factors)
 
+    def __str__(self):
+        return 'Interval({}, {}, {}, {})'.format(self.n1, self.n2, self.chr_num, self.factors)
+
+    def __repr__(self):
+        return self.__str__()
+
 
 def str_to_int(string):
     if string == "x" or string == "X":
