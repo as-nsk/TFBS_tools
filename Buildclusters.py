@@ -89,6 +89,9 @@ class Point:
     def __str__(self):
         return 'Point({}, {}, {}, {})'.format(self.coord, self.opening, self.chr_num, self.factor)
 
+    def __repr__(self):
+        return self.__str__()
+
 
 class Interval:
     def __init__(self, n1=None, n2=None, chr_num=None, factors=None):
