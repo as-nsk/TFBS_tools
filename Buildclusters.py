@@ -9,17 +9,19 @@ from collections import namedtuple
 # Interval = namedtuple('Interval', 'n1 n2 chr_number factors')
 
 
-def read_file(filename):
-    arrname = []
+def read_file(filename, points):
     with open(filename) as f:
-        #f.next()
+        factor = f.readline().strip()
         for line in f:
             line = line.strip()
-            if line != "NA":
-                line = float(line)
-                arrname.append(float(line))
-    f.close()
-    return arrname
+            chr, coords = line.split(':')
+            chr_num = str_to_int(chr[-1])
+            coords = coords.split('-')
+            coord1, coord2 = [int(coord) for coord in coords]
+            point = Point(coord1, True, chr_num, factor)
+            points.append(point)
+            point = Point(coord2, False, chr_num, factor)
+            points.append(point)
 
 
 # print(sys.path)
