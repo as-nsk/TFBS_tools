@@ -9,6 +9,16 @@ from collections import namedtuple
 # Interval = namedtuple('Interval', 'n1 n2 chr_number factors')
 
 
+def add_interval(interval, intervals, max_length):
+    while interval.n2 - interval.n1 > max_length:
+        n2 = interval.n2
+        interval.n2 = interval.n1 + max_length
+        intervals.append(interval)
+        interval.n2 = n2
+        interval.n1 = interval.n1 + max_length
+    intervals.append(interval)
+
+
 def make_intervals(points, intervals, merge_gap, max_length):
     counter = 0
     inside = False
