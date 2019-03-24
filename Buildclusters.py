@@ -10,6 +10,8 @@ from collections import namedtuple
 
 
 def add_interval(interval, intervals, max_length):
+    from copy import copy
+    interval = copy(interval)
     while interval.n2 - interval.n1 > max_length:
         n2 = interval.n2
         interval.n2 = interval.n1 + max_length
@@ -24,7 +26,6 @@ def make_intervals(points, intervals, merge_gap, max_length):
     inside = False
     interval = Interval()
     for i in range(len(points) - 1):
-        pass
         if points[i].opening:
             counter = counter + 1
             if not inside:
@@ -33,7 +34,6 @@ def make_intervals(points, intervals, merge_gap, max_length):
                 inside = True
             interval.factors.add(points[i].factor)
         else:
-            pass
             counter = counter - 1
             distance = points[i+1].coord - points[i].coord
             last_point = i == len(points) - 1
