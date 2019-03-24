@@ -23,7 +23,7 @@ def make_intervals(points, intervals, merge_gap, max_length):
     counter = 0
     inside = False
     interval = Interval()
-    for i in range(len(points)):
+    for i in range(len(points) - 1):
         pass
         if points[i].opening:
             counter = counter + 1
