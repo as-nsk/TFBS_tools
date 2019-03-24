@@ -3,10 +3,10 @@ import numpy
 #from collections import ChainMap
 from collections import namedtuple
 
-Point = namedtuple('Point', 'coord opening chr_number factor')
+# Point = namedtuple('Point', 'coord opening chr_number factor')
 #factor = open("input/input1.txt").readline().rstrip()
 
-Interval = namedtuple('Interval', 'n1 n2 chr_number factors')
+# Interval = namedtuple('Interval', 'n1 n2 chr_number factors')
 
 
 def read_file(filename):
@@ -21,27 +21,29 @@ def read_file(filename):
     f.close()
     return arrname
 
-print(sys.path)
-fname_pattern = 'input/input%s.txt'
+
+# print(sys.path)
+# fname_pattern = 'input/input%s.txt'
 
 
 def count_lines(fname):
-    proc = sp.Popen(['wc', '-l', fname], stdout=sp.PIPE)
-    (out, _) = proc.communicate()
+    # proc = sp.Popen(['wc', '-l', fname], stdout=sp.PIPE)
+    # (out, _) = proc.communicate()
     # status = proc.wait()
-    out = str(out).decode()
-    pos = out.find(' ')
-    lc = int(out[:pos])
-    return lc
+    # out = str(out).decode()
+    # pos = out.find(' ')
+    # lc = int(out[:pos])
+    # return lc
+    pass
 
 
-for i in ['1', '2', '3']:
-        fname = fname_pattern % i
-        #number_of_lines = count_lines(fname)
-        #number_of_lines
-        #number_of_all_lines.append(number_of_lines)
-        my_list = read_file(fname)
-        # my_lists.append(my_list)
+# for i in ['1', '2', '3']:
+#         fname = fname_pattern % i
+#         #number_of_lines = count_lines(fname)
+#         #number_of_lines
+#         #number_of_all_lines.append(number_of_lines)
+#         my_list = read_file(fname)
+#         # my_lists.append(my_list)
 
 
 class Point:
