@@ -98,13 +98,7 @@ class Interval:
         self.factors = factors if factors else set([])
 
     def factors_count(self):
-        count = 0
-        factors = self.factors
-        factor = 1
-        while factor:
-            if factors & factor:
-                count = count + 1
-            factor = factor << 1
+        return len(self.factors)
 
 
 def str_to_int(string):
