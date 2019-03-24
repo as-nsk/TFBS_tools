@@ -9,6 +9,32 @@ from collections import namedtuple
 # Interval = namedtuple('Interval', 'n1 n2 chr_number factors')
 
 
+def make_intervals(points, intervals, merge_gap, max_length):
+    counter = 0
+    inside = False
+    interval = Interval()
+    for i in range(len(points)):
+        pass
+        if points[i].opening:
+            counter = counter + 1
+            if not inside:
+                interval.n1 = points[i].coord
+                interval.chr_num = points[i].chr_num
+                # interval.factors = 0
+                inside = True
+            interval.factors.add(points[i])
+        else:
+            pass
+            counter = counter - 1
+            distance = points[i+1].coord - points[i].coord
+            last_point = i == len(points) - 1
+            if counter == 0 and (last_point or distance > merge_gap):
+                pass
+                interval.n2 = points[i].coord
+                # TODO: add_interval()
+                inside = False
+
+
 def read_file(filename, points):
     with open(filename) as f:
         factor = f.readline().strip()
