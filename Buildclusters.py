@@ -31,7 +31,7 @@ def make_intervals(points, intervals, merge_gap, max_length):
                 interval.n1 = points[i].coord
                 interval.chr_num = points[i].chr_num
                 inside = True
-            interval.factors.add(points[i])
+            interval.factors.add(points[i].factor)
         else:
             pass
             counter = counter - 1
