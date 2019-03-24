@@ -74,4 +74,14 @@ def main():
 
 
 if __name__ == '__main__':
+    print('start')
+    points = []
+    fn = 'input5.txt'
+    import time
+    start = time.time()
+    read_file(fn, points)
+    end = time.time()
+    print(end - start)
+    print(len(points))
+
     pass
