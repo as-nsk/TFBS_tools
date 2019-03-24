@@ -14,6 +14,8 @@ def read_file(filename, points):
         factor = f.readline().strip()
         for line in f:
             line = line.strip()
+            if not line:
+                continue
             chr, coords = line.split(':')
             chr_num = str_to_int(chr[3:])
             coords = coords.split('-')
