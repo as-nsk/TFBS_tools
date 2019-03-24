@@ -45,11 +45,11 @@ class Point:
 
 
 class Interval:
-    def __init__(self, n1, n2, chr_num, factors):
+    def __init__(self, n1=None, n2=None, chr_num=None, factors=None):
         self.n1 = n1
         self.n2 = n2
         self.chr_num = chr_num
-        self.factors = factors
+        self.factors = factors if factors else set([])
 
     def factors_count(self):
         count = 0
