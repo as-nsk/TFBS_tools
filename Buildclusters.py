@@ -121,28 +121,44 @@ def str_to_int(string):
 
 
 def main():
-    files_count = 0
+    import time
     merge_gap = 200
     max_length = 500
     files = os.listdir('input')
     files = [os.path.join('input', file) for file in files]
     points = []
+
+    start = time.time()
     for file in files:
         read_file(file, points)
-        print('read file {}'.format(file))
     pass
+    end = time.time()
+    print('read {} files in {} seconds'.format(len(files), end - start))
 
+    start = time.time()
     points.sort()
+    end = time.time()
+    print('sorted all points in {} seconds'.format(end - start))
 
     intervals = []
+    start = time.time()
     make_intervals(points, intervals, merge_gap, max_length)
+    end = time.time()
+    print('make_intervals() in {} seconds'.format(end - start))
+
+    start = time.time()
     write_file('results.txt', intervals)
+    end = time.time()
+    print('write_file() in {} seconds'.format(end - start))
 
     pass
 
 
 if __name__ == '__main__':
     print('started')
+    import time
+    sstart = time.time()
     main()
-    print('finished')
+    eend = time.time()
+    print('finished in {} seconds in total'.format(eend - sstart))
     pass
