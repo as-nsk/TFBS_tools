@@ -32,6 +32,7 @@ def make_intervals(points, intervals, merge_gap, max_length):
             if not inside:
                 interval.n1 = points[i].coord
                 interval.chr_num = points[i].chr_num
+                interval.factors = set()
                 inside = True
             interval.factors.add(points[i].factor)
         else:
