@@ -16,10 +16,10 @@ def add_interval(interval, intervals, max_length):
     while interval.n2 - interval.n1 > max_length:
         n2 = interval.n2
         interval.n2 = interval.n1 + max_length
-        intervals.append(interval)
+        intervals.append(deepcopy(interval))
         interval.n2 = n2
         interval.n1 = interval.n1 + max_length
-    intervals.append(interval)
+    intervals.append(deepcopy(interval))
 
 
 def make_intervals(points, intervals, merge_gap, max_length):
