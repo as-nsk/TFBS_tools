@@ -11,8 +11,8 @@ from collections import namedtuple
 
 
 def add_interval(interval, intervals, max_length):
-    from copy import copy
-    interval = copy(interval)
+    from copy import deepcopy
+    interval = deepcopy(interval)
     while interval.n2 - interval.n1 > max_length:
         n2 = interval.n2
         interval.n2 = interval.n1 + max_length
