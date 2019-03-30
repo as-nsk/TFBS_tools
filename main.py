@@ -2,6 +2,8 @@
 import sys
 from PyQt5 import QtWidgets
 from MainWindow import Ui_MainWindow
+from PyQt5.QtWidgets import (QMainWindow, QTextEdit,
+    QAction, QFileDialog, QApplication)
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -13,13 +15,14 @@ class MainWindow(QtWidgets.QMainWindow):
         self.show()
 
     def onPushButtonClick(self):
-        msg = QtWidgets.QMessageBox()
-        msg.setIcon(QtWidgets.QMessageBox.Information)
-        msg.setText("Select the files to be loaded")
-        msg.setInformativeText("This is additional information")
-        msg.setWindowTitle("Load local data")
-        msg.setDetailedText("The details are as follows:")
-        msg.exec_()
+        import os
+        directory = os.getcwd()
+
+
+        fname = QFileDialog.getOpenFileNames(self, 'Open file', directory)
+        print(fname[0])
+        self.chosenFiles = fname[0]
+    
 
 
 if __name__ == '__main__':
